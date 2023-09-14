@@ -29,6 +29,14 @@ class ImageAssets {
 
   static String Imageco  = "${imagePath}qqqqqqqqqqqqqq.jpg";
 
+
+  static String Imagereq  = "${imagePath}square.svg";
+
+  static String Imageback  = "${imagePath}Rectangle.png";
+
+  static String Imager  = "${imagePath}r.svg";
+
+
   static const String translationMainImage =
       "${imagePath}pexels-fauxels-3184306.jpg";
 }

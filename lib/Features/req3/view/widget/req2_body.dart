@@ -20,7 +20,7 @@ class Requ3_body extends StatelessWidget {
           children: [
             SizedBox(
               width:  getWidth(context),
-              height: getHeight(context)/1.4,
+              height: getHeight(context)/1.45,
               child: ListView(
                 children: [
                   mainpart(getWidth(context),getHeight(context),'Request code','115586'),
@@ -422,11 +422,11 @@ class Requ3_body extends StatelessWidget {
 
 
 
-                        onPressed: (){}, child: const Text(
+                        onPressed: (){}, child:  Text(
                       'invoice',
                       style: TextStyle(
                         color: Color(0xFF0097EC),
-                        fontSize: 16,
+                        fontSize: getWidth(context)/21,
                         fontFamily: 'Manrope',
                         fontWeight: FontWeight.w600,
                         height: 0,

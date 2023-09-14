@@ -31,7 +31,9 @@ class Request2AppBarContent extends StatelessWidget {
 
                       Radius.circular(10)),
                 ),
-                child: Icon(Icons.arrow_back_ios_new)),
+                child: Icon(Icons.arrow_back_ios_new,
+
+                )),
           ),
           SizedBox(
 
@@ -62,6 +64,8 @@ class Request2AppBarContent extends StatelessWidget {
                   border: Border.all(width: 1, color: Colors.white)),
               child: SvgPicture.asset(
                 ImageAssets.Imagechat,
+                width: getWidth(context)/21,
+                height:getWidth(context)/21 ,
               ),
             ),
           )

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'Core/Utils/theme_manager.dart';
 
+import 'Features/App info/view/App info.dart';
 import 'Features/Requests/view/request1.dart';
 
 

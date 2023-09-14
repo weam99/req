@@ -21,7 +21,7 @@ class Requ2_body extends StatelessWidget {
           children: [
             SizedBox(
               width:  getWidth(context),
-              height: getHeight(context)/1.4,
+              height: getHeight(context)/1.45,
               child: ListView(
                 children: [
 

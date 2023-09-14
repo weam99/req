@@ -103,13 +103,14 @@ class Cards extends StatelessWidget {
                                 Row(
                                   children: [
                                     Container(
-                                      width: 8,
-                                      height: 8,
+                                      width: getWidth(context)/70,
+                                      height: getWidth(context)/70,
                                       decoration: ShapeDecoration(
                                         color: Color(0xFF5A00A4),
                                         shape: OvalBorder(),
                                       ),
                                     ),
+                                    SizedBox(width: getWidth(context)/120,),
                                     Text(
                                       'Arabic',
                                       textAlign: TextAlign.center,
@@ -123,20 +124,24 @@ class Cards extends StatelessWidget {
                                     SizedBox(width: 10,),
 
                                     SvgPicture.asset(
+
                                       ImageAssets.Imagearrow,
+                                      width:getWidth(context)/20 ,
+                                      height:getWidth(context)/20 ,
                                     ),
 
                                     SizedBox(width: getWidth(context)/30,),
 
 
                                     Container(
-                                      width: 8,
-                                      height: 8,
+                                      width: getWidth(context)/70,
+                                      height: getWidth(context)/70,
                                       decoration: ShapeDecoration(
                                         color: Color(0xFFA534A8),
                                         shape: OvalBorder(),
                                       ),
                                     ),
+                                    SizedBox(width: getWidth(context)/120,),
                                     Text(
                                       'English',
                                       textAlign: TextAlign.center,
@@ -247,7 +252,7 @@ class Cards extends StatelessWidget {
                              bottomRight: Radius.circular(0),
                            ),
                            border: Border.all(
-                             color: Color.fromARGB(255, 255, 239, 221),
+                             color:  Color(0xFFD1FDCA),
                              width: 1,
                            ),
                          ),
@@ -283,7 +288,7 @@ class Cards extends StatelessWidget {
                              bottomRight: Radius.circular(0),
                            ),
                            border: Border.all(
-                             color: Color.fromARGB(255, 255, 239, 221),
+                             color: Color(0xFFC5EAFF),
                              width: 1,
                            ),
                          ),

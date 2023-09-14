@@ -62,6 +62,8 @@ class Request2AppBarContent extends StatelessWidget {
                   border: Border.all(width: 1, color: Colors.white)),
               child: SvgPicture.asset(
                 ImageAssets.Imagechat,
+                width: getWidth(context)/21,
+                height:getWidth(context)/21 ,
               ),
             ),
           )

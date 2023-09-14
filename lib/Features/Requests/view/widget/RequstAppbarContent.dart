@@ -39,14 +39,14 @@ class RequestAppBarContent extends StatelessWidget {
                    "Hi Ahmed",
                    style: TextStyle(
                        fontFamily: "Manrope",
-                       fontSize: 20,
+                       fontSize: getWidth(context)/23,
                        color: Colors.white),
                  ),
                  Text(
                    "How can we help you ?",
                    style: TextStyle(
                        fontFamily: "Manrope",
-                       fontSize: 14,
+                       fontSize: getWidth(context)/28,
                        color: Colors.white),
                  ),
                ],
@@ -67,6 +67,8 @@ class RequestAppBarContent extends StatelessWidget {
                   border: Border.all(width: 1, color: Colors.white)),
               child: SvgPicture.asset(
                 ImageAssets.Imagechat,
+                width: getWidth(context)/21,
+                height:getWidth(context)/21 ,
               ),
             ),
           )
