@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rgb_academy/Core/constant.dart';
-import 'package:solar_icons/solar_icons.dart';
 
-import '../../../../Core/Utils/assets_manager.dart';
-import '../../../../Core/Utils/color_manager.dart';
-import 'package:flutter_svg/svg.dart';
 
 class chatAppBarContent extends StatelessWidget {
   const chatAppBarContent({super.key});

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../../Core/Utils/assets_manager.dart';
-import '../../../../Core/constant.dart';
 import '3_burtton_silter.dart';
 import 'Cards.dart';
 

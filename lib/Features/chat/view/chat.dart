@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rgb_academy/Features/Request2/view/widget/request2_body.dart';
+
 import 'package:rgb_academy/Features/chat/view/widget/chatbody.dart';
 
 class chat extends StatelessWidget {

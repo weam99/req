@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:solar_icons/solar_icons.dart';
+
 
 import '../../../../Core/Utils/assets_manager.dart';
 import '../../../../Core/Utils/style.dart';
