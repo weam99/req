@@ -110,6 +110,8 @@ class Requ2_body extends StatelessWidget {
                       ),
                       SvgPicture.asset(
                         ImageAssets.Imagearrow,
+                        width: getWidth(context)/20,
+                        height: getWidth(context)/20,
                       ),
                       Expanded(
                         flex: 1,
