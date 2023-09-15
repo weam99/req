@@ -13,6 +13,7 @@ class RequestAppBarContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -20,8 +21,8 @@ class RequestAppBarContent extends StatelessWidget {
          Row(
            children: [
              Container(
-                width: getHeight(context)/13,
-                height: getHeight(context)/13,
+                width: orientation == Orientation.portrait?  getHeight(context)/13 :getWidth(context)/6,
+                height: orientation == Orientation.portrait?  getHeight(context)/13 :getWidth(context)/6,
                 decoration:
                 BoxDecoration(borderRadius: BorderRadius.circular(8)),
                 clipBehavior: Clip.antiAlias,

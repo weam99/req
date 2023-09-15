@@ -7,8 +7,9 @@ class AppBarRequst extends StatelessWidget {
   final Widget? content;
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return Container(
-      height: getHeight(context) / 8,
+      height:orientation == Orientation.portrait?getHeight(context) / 8 :getHeight(context) / 4,
       color: ColorManager.primary,
       padding: const EdgeInsets.only(
         left: 16,

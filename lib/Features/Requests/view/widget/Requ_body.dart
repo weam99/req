@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 import '3_burtton_silter.dart';
 import 'Cards.dart';
 
@@ -9,16 +10,16 @@ class Requ_body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-     // height: getHeight(context),
-
       color: Color.fromARGB(255, 247,250, 251),
-      child: const Column(
+      child:  Column(
 
         children: [
 
           buttons_filter(),
 
-          Cards(),
+          SizedBox(
+
+              child: Cards()),
 
 
 

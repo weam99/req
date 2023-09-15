@@ -10,6 +10,9 @@ class chat_body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Orientation orientation = MediaQuery.of(context).orientation;
+
     return Container(
       color:
      const Color.fromARGB(255, 247,250, 251),
@@ -18,7 +21,7 @@ class chat_body extends StatelessWidget {
           children: [
             SizedBox(
               width:  getWidth(context),
-              height: getHeight(context)/1.45,
+              height: orientation == Orientation.portrait? getHeight(context)/1.45 :getHeight(context)/2,
               child: ListView(
                 children: [
                   Row(
@@ -46,7 +49,7 @@ class chat_body extends StatelessWidget {
                       children: [
                         Container(
                           width: getWidth(context)/1.2,
-                          height: getHeight(context)/12,
+                          height: orientation == Orientation.portrait? getHeight(context)/9: getHeight(context)/3,
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                           decoration: const ShapeDecoration(
                             color: Colors.white,
@@ -91,7 +94,7 @@ class chat_body extends StatelessWidget {
 
                         Container(
                           width: getWidth(context)/1.2,
-                          height: 114,
+                          height: orientation == Orientation.portrait? getHeight(context)/6: getHeight(context)/2,
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                           decoration: const ShapeDecoration(
                             color: Colors.white,
@@ -149,7 +152,7 @@ class chat_body extends StatelessWidget {
                         children: [
                           Container(
                             width:  getWidth(context)/1.2,
-                            height: getHeight(context)/7,
+                            height: orientation == Orientation.portrait? getHeight(context)/6: getHeight(context)/2,
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                             decoration: const ShapeDecoration(
                               color: Color(0xFFC4E9FF),
@@ -237,8 +240,11 @@ class chat_body extends StatelessWidget {
                       Column(
                         children: [
                           Container(
-                            width: getWidth(context)/1.3,
-                            height: getHeight(context)/3.6,
+
+                            width:  orientation == Orientation.portrait? getHeight(context) /1.3 : getWidth(context)/2,
+                            height:  orientation == Orientation.portrait? getHeight(context)/6 : getWidth(context)/3.5,
+
+
                             padding: const EdgeInsets.only(top: 6),
                             decoration: const ShapeDecoration(
                               color: Colors.white,
@@ -256,8 +262,10 @@ class chat_body extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  width: getHeight(context)/2,
-                                  height: getHeight(context)/4,
+
+
+                                  width:  orientation == Orientation.portrait? getHeight(context)/1.3 : getWidth(context)/2,
+                                  height:  orientation == Orientation.portrait? getHeight(context)/6: getWidth(context)/4,
                                   decoration: const ShapeDecoration(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
@@ -406,8 +414,11 @@ class chat_body extends StatelessWidget {
                                 ),
 
                                 Container(
-                                  width: getWidth(context)/1.3,
-                                  height: getHeight(context)/3.6,
+
+                                  width:  orientation == Orientation.portrait? getHeight(context) /1.3 : getWidth(context)/2,
+                                  height:  orientation == Orientation.portrait? getHeight(context)/6 : getWidth(context)/3.5,
+
+
                                   padding: const EdgeInsets.only(top: 6),
                                   decoration: const ShapeDecoration(
                                     color: Colors.white,
@@ -415,8 +426,7 @@ class chat_body extends StatelessWidget {
                                       borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(16),
                                         topRight: Radius.circular(16),
-                                        bottomLeft: Radius.circular(16),
-
+                                        bottomRight: Radius.circular(16),
                                       ),
                                     ),
                                   ),
@@ -426,15 +436,17 @@ class chat_body extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Container(
-                                        width: getHeight(context)/2,
-                                        height: getHeight(context)/4,
+
+
+                                        width:  orientation == Orientation.portrait? getHeight(context)/1.3 : getWidth(context)/2,
+                                        height:  orientation == Orientation.portrait? getHeight(context)/6: getWidth(context)/4,
                                         decoration: const ShapeDecoration(
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               topLeft: Radius.circular(8),
                                               topRight: Radius.circular(8),
-                                              bottomLeft: Radius.circular(8),
-                                              bottomRight: Radius.circular(1),
+                                              bottomLeft: Radius.circular(1),
+                                              bottomRight: Radius.circular(8),
                                             ),
                                           ),
                                         ),
@@ -453,7 +465,7 @@ class chat_body extends StatelessWidget {
                       ),
                       const SizedBox(width: 5,),
                       SizedBox(
-                        height: getHeight(context)/2,
+                        height: orientation == Orientation.portrait ?  getHeight(context)/2 : getHeight(context)/1 ,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
 

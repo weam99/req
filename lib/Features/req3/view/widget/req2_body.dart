@@ -11,6 +11,7 @@ class Requ3_body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return Container(
       color:
 
@@ -20,17 +21,19 @@ class Requ3_body extends StatelessWidget {
           children: [
             SizedBox(
               width:  getWidth(context),
-              height: getHeight(context)/1.45,
+              height: orientation == Orientation.portrait? getHeight(context)/1.53: getHeight(context)/2,
               child: ListView(
                 children: [
-                  mainpart(getWidth(context),getHeight(context),'Request code','115586'),
+
+
+                  mainpart(getWidth(context),getHeight(context),'Request code','115586', orientation == Orientation.portrait),
 
 
                   Container(
                     margin: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ),
                     padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
                     width: double.infinity,
-                    height: getHeight(context)/15,
+                    height:  orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(width: 1,color: Colors.white,),
@@ -47,7 +50,7 @@ class Requ3_body extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(3),
                           width: getWidth(context)/4,
-                          height: getHeight(context)/24,
+                          height:orientation == Orientation.portrait? getHeight(context)/24: getHeight(context)/8,
                           decoration: BoxDecoration(
                               color: const Color.fromARGB(255, 255, 239, 221),
                               border: Border.all(width: 1,color: const Color.fromARGB(255, 255, 239, 221),),
@@ -65,9 +68,9 @@ class Requ3_body extends StatelessWidget {
                       ],),
                   ),
 
-                  mainpart(getWidth(context),getHeight(context),'Request date', '23 jul 2023'),
+                  mainpart(getWidth(context),getHeight(context),'Request date', '23 jul 2023',orientation == Orientation.portrait),
 
-                  mainpart(getWidth(context),getHeight(context), 'type of Translation',  'Translation'),
+                  mainpart(getWidth(context),getHeight(context), 'type of Translation',  'Translation',orientation == Orientation.portrait),
 
 
 
@@ -77,7 +80,7 @@ class Requ3_body extends StatelessWidget {
                         child: Container(
                             padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
                             margin: EdgeInsets.symmetric(horizontal:getWidth(context)/30 ,vertical: getHeight(context)/50 ),
-                            height: getHeight(context)/15,
+                            height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 border: Border.all(width: 1,color: Colors.white,),
@@ -106,7 +109,7 @@ class Requ3_body extends StatelessWidget {
                             margin: EdgeInsets.symmetric(horizontal:getWidth(context)/30,vertical: getHeight(context)/50  ),
                             padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
 
-                            height: getHeight(context)/15,
+                            height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 border: Border.all(width: 1,color: Colors.white,),
@@ -127,15 +130,15 @@ class Requ3_body extends StatelessWidget {
                     ],
                   ),
 
-                  mainpart(getWidth(context),getHeight(context),  'industry',   'Political'),
+                  mainpart(getWidth(context),getHeight(context),  'industry',   'Political',orientation == Orientation.portrait),
 
 
-                  mainpart(getWidth(context),getHeight(context),   'Name',    'Ahmed Mabrouk'),
+                  mainpart(getWidth(context),getHeight(context),   'Name',    'Ahmed Mabrouk',orientation == Orientation.portrait),
 
 
-                  mainpart(getWidth(context),getHeight(context),    'E-mail',     'am5424@fayoum.edu.eg'),
+                  mainpart(getWidth(context),getHeight(context),    'E-mail',     'am5424@fayoum.edu.eg',orientation == Orientation.portrait),
 
-                  mainpart(getWidth(context),getHeight(context),       'Phone number',      '0111 394 9916'),
+                  mainpart(getWidth(context),getHeight(context),       'Phone number',      '0111 394 9916',orientation == Orientation.portrait),
 
 
 
@@ -146,7 +149,7 @@ class Requ3_body extends StatelessWidget {
                         child: Container(
                           margin: EdgeInsets.only(left:getWidth(context)/30,bottom: getHeight(context)/50  ),
                           padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
-                          height: getHeight(context)/15,
+                          height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(width: 1,color: Colors.white,),
@@ -177,9 +180,9 @@ class Requ3_body extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: Container(
-                          margin: EdgeInsets.only(left:getWidth(context)/30,right: getWidth(context)/30,bottom: getHeight(context)/50  ),
+                          margin: EdgeInsets.only(left:getWidth(context)/30,right: getWidth(context)/30,bottom: getHeight(context)/50,top: getHeight(context)/50  ),
                           padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
-                          height: getHeight(context)/15,
+                          height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(width: 1,color: Colors.white,),
@@ -214,7 +217,7 @@ class Requ3_body extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.symmetric(horizontal:getWidth(context)/30 ,vertical: getHeight(context)/50 ),
                         width: double.infinity,
-                        height: getHeight(context)/7,
+                        height:orientation == Orientation.portrait? getHeight(context)/7:getHeight(context)/3,
                         padding: const EdgeInsets.only(bottom: 5,left: 12,right: 12,top: 18) ,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -234,7 +237,7 @@ class Requ3_body extends StatelessWidget {
                       ),
 
                       Positioned(
-                        top: getHeight(context)/115,
+                        top:orientation == Orientation.portrait?  getHeight(context)/115: getHeight(context)/855 ,
                         left: getWidth(context)/22,
                         child: Container(
                           width: getWidth(context)/3,
@@ -267,7 +270,7 @@ class Requ3_body extends StatelessWidget {
                         child: Container(
                           margin: EdgeInsets.only(left:getWidth(context)/30,bottom: getHeight(context)/50  ),
                           padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
-                          height: getHeight(context)/15,
+                          height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(width: 1,color: Colors.white,),
@@ -298,7 +301,7 @@ class Requ3_body extends StatelessWidget {
                         child: Container(
                           margin: EdgeInsets.only(left:getWidth(context)/30,right: getWidth(context)/30,bottom: getHeight(context)/50  ),
                           padding: EdgeInsets.symmetric(horizontal:getWidth(context)/30  ) ,
-                          height: getHeight(context)/15,
+                          height:orientation == Orientation.portrait? getHeight(context)/15:getHeight(context)/5,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(width: 1,color: Colors.white,),
@@ -334,7 +337,9 @@ class Requ3_body extends StatelessWidget {
                         Container(
                           margin: EdgeInsets.symmetric(horizontal:getWidth(context)/30 ,vertical: getHeight(context)/50 ),
                           width: double.infinity,
-                          height: getHeight(context)/7,
+
+                          height: orientation == Orientation.portrait? getHeight(context)/7:getHeight(context)/2.5,
+
                           padding: const EdgeInsets.only(bottom: 5,left: 12,right: 12,top: 16) ,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -348,7 +353,7 @@ class Requ3_body extends StatelessWidget {
                         ),
 
                         Positioned(
-                          top: getHeight(context)/115,
+                          top: orientation == Orientation.portrait? getHeight(context)/115: getHeight(context)/999900 ,
                           left: getWidth(context)/222,
                           child: Container(
                             width: getWidth(context)/3,
@@ -447,14 +452,14 @@ class Requ3_body extends StatelessWidget {
   }
 }
 
-Container  mainpart( width ,height, Name1, Name2)
+Container  mainpart( width ,height, Name1, Name2, bool check)
 {
 
   return Container(
     margin: EdgeInsets.symmetric(horizontal:width/30,vertical: height/50  ),
     padding: EdgeInsets.symmetric(horizontal:width/30  ) ,
     width: double.infinity,
-    height: height/15,
+    height: check?  height/15 : height/5 ,
     decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(width: 1,color: Colors.white,),
