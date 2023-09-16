@@ -11,6 +11,7 @@ class Cards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     Orientation orientation = MediaQuery.of(context).orientation;
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: getWidth(context)/25,),
